@@ -26,6 +26,7 @@ export const setContext = (setter: ContextSetter): ApolloLink =>
             error: observer.error.bind(observer),
             complete: observer.complete.bind(observer),
           });
+          return null;
         })
         .catch(observer.error.bind(observer));
 
